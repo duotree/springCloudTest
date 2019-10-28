@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.gm.gmServer.GmServerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.371 s - in com.gm.gmServer.GmServerApplicationTests

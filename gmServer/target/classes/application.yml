@@ -1,0 +1,15 @@
+server:
+  port: 1111
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  defaultZone: http://localhost:1111/eureka/
+spring:
+  application:
+    name: gm-server
+#  profiles:
+#    active: peer2
+
