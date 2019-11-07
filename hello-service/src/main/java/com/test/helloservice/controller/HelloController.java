@@ -1,6 +1,6 @@
 package com.test.helloservice.controller;
 
-import com.test.helloservice.model.User;
+import com.test.helloserviceapi.dto.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

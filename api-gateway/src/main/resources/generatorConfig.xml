@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="D:\new_constructor\maven\mysql\mysql-connector-java\8.0.11\mysql-connector-java-8.0.11.jar"/>
+    <context id="MysqlTables" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin" />
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/gmdb?charset=utf8&amp;serverTimezone=GMT&amp;useSSL=false"
+                        userId="admin"
+                        password="admin">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.test.apigateway.dto"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="MIXEDMAPPER"
+                             targetPackage="com.test.apigateway.mapper"
+                             targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <table tableName="menu_button" domainObjectName="MenuButton" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true" />
+            <!--<generatedKey column="id" sqlStatement="CALL IDENTITY()" identity="true" />-->
+            <!--<columnOverride column="price" javaType="org.joda.money.Money" jdbcType="BIGINT"
+                            typeHandler="com.yd.spring.jdbcdemo.mybatis.handler.MoneyTypeHandler"/>-->
+        </table>
+    </context>
+</generatorConfiguration>

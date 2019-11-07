@@ -1,10 +1,10 @@
 package com.test.feignconsumer.service;
 
-import com.test.feignconsumer.model.User;
+import com.test.helloserviceapi.dto.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient("hello-service")
+//@FeignClient("hello-service")
 public interface HelloService {
     @RequestMapping(value="/hello")
     String hello();
